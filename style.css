@@ -1,0 +1,1404 @@
+/*цвета*/
+:root{
+    --background-green2:#CDEB72;
+    --background-green3: #A4DB00;
+    --button-ok: #A4DB00;
+    --linear-green: linear-gradient(135.65deg, #A4DB00 0%, #129E00 134.47%);
+    --linear-black: linear-gradient(180deg, rgba(0, 0, 0, 0) 18.16%, rgba(0, 0, 0, 0.5) 95.98%);
+    --basic-gray4: #F7F7F7;
+    --button-danger: #FF2F2F;
+    --text-gray1:#424141;
+    --text-gray2: #797979;
+    --basic-gray1: #8C8C8C;
+    --background-orange: #FF8000;
+    --button-edit: #FFA800;
+    --text-green: #003639;
+    --background-green1: #F0F9D5;
+    --background-green4: #66C133;
+    --background-green5: #129E00;
+    --basic-gray3: #E5E5E5;
+    --button-block: #E5E5E5;
+    --basic-white: #FFFFFF;
+    --basic-black: #000000;
+    --basic-gray2: #C4C4C4;
+}
+
+/*шрифты*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 38px;
+}
+
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18pt;
+    line-height: 33px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 27px;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.h1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20pt;
+    line-height: 38px;
+}
+
+
+.h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18pt;
+    line-height: 33px;
+}
+
+.h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 27px;
+}
+
+.h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12pt;
+    line-height: 22px;
+}
+
+.comment{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+
+.new {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6px;
+    line-height: 14px;
+}
+
+
+.t1{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.t2{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+/*цвета для шрифтов*/
+.text-gray1{
+    color: var(--text-gray1);
+}
+
+.text-gray2{
+  color: var(--text-gray2);
+}
+
+.text-green{
+  color: var(--text-green);
+}
+
+/*цвета*/
+
+.color-red{
+  color: var(--button-danger);
+}
+
+.color-green4{
+  color: var(--background-green4);
+}
+/*отступы*/
+.m-t-1{
+  margin-top: 1%;
+}
+
+.p-b-03{
+  padding-bottom: 0.3%;
+}
+
+.p-t-03{
+  padding-top: 0.3%;
+}
+
+.m-t-10{
+  margin-top: 10%!important;
+}
+
+.m-t-5{
+  margin-top: 5%!important;
+}
+
+.m-b-1{
+  margin-bottom: 1%;
+}
+
+.m-b-3{
+  margin-bottom: 3%;
+}
+
+.m-t-3{
+  margin-top: 3%;
+}
+
+.m-l-1{
+  margin-left: 1%;
+}
+
+.m-l-5{
+  margin-left: 5%;
+}
+
+.m-l-10{
+  margin-left: 10%;
+}
+
+.m-r-1{
+  margin-right: 1%;
+}
+
+.p-10{
+  padding: 10%;
+}
+
+
+/*минимальная ширина*/
+
+.input_width{
+  max-width: 8em !important;
+}
+
+/*выравнивания*/
+.align-center{
+  text-align: center !important;
+}
+
+.align-right{
+  text-align: right !important;
+}
+
+.align-middle{
+  text-align: middle !important;
+  align-content: middle !important;
+}
+
+.align-left{
+  text-align: left !important;
+}
+
+.button-center{
+  text-align: center!important;
+  justify-content: center;
+}
+
+.align-bottom{
+  vertical-align: bottom;
+}
+
+.back{
+  background: var(--basic-gray4) !important;
+  min-height: 100% !important;
+  height: 100% !important;
+}
+
+
+.a{
+  color: var(--text-gray1);
+  text-decoration: none;
+}
+
+.a:hover{
+  color: var(--text-gray2);
+  text-decoration: none;
+}
+
+
+.a-menu {
+  color: var(--text-gray1);
+  text-decoration: none;
+}
+
+.a-menu:hover {
+  color: var(--text-gray1);
+  text-decoration: none;
+}
+
+
+
+/*кнопка*/
+.but_back{
+  text-decoration: none!important;
+  color: var(--text-green)!important;
+  font-family: 'Open Sans'!important;
+  font-size: 16pt!important;
+  font-weight: 500!important;
+  font-style: italic!important;
+  text-decoration: underline!important;
+}
+
+
+.check[type="checkbox"] {
+  display: none;
+}
+
+
+/*кнопки*/
+.button_green_add{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-ok);
+  color: var(--basic-white);
+  background:var(--button-ok);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_green_add:disabled{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--background-green2);
+  color: var(--basic-white);
+  background:var(--background-green2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_green_add:disabled:hover{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--background-green2);
+  color: var(--basic-white);
+  background:var(--background-green2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_green_add:hover{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--background-green4);
+  color: var(--basic-white);
+  background:var(--background-green4);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_green_add:active{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  outline: none;
+  border-color: var(--button-ok);
+  color: var(--basic-white);
+  background:var(--button-ok);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_green_add:focus{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  outline: none;
+  border-width: 2px;
+  border-color: var(--button-ok);
+  color: var(--basic-white);
+  background:var(--button-ok);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+
+.button_border_green_add{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-ok);
+  color: var(--button-ok);
+  background:var(--basic-white);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_border_green_add:hover{
+  padding: 8px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-ok);
+  color: var(--button-ok);
+  background:var(--basic-white);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+
+.button_red_add{
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-danger);
+  color: var(--basic-white);
+  background:var(--button-danger);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.button_red_add:hover{
+  padding: 5px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-danger);
+  outline: none;
+  color: var(--basic-white);
+  background:var(--button-danger);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+
+.button_red_add:disabled{
+  padding: 5px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ff9d9d;
+  outline: none;
+  color: var(--basic-white);
+  background: #ff9d9d;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.button_red_add:active{
+  padding: 5px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-danger);
+  outline: none;
+  color: var(--basic-white);
+  background:var(--button-danger);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.button_red_add:focus{
+  padding: 5px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--button-danger);
+  outline: none;
+  color: var(--basic-white);
+  background:var(--button-danger);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+
+.button_white_add{
+  padding: 5px;
+  margin-bottom: 2%;
+  width: 100%;
+  outline-style: none;
+  border: none;
+  border-color: var(--basic-gray1);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--basic-gray1);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_white_add:disabled{
+  padding: 5px;
+  margin-bottom: 2%;
+  width: 100%;
+  outline-style: none;
+  border: none;
+  border-color: var(--basic-gray2);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--basic-gray2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+
+.button_white_add:disabled:hover{
+  padding: 5px;
+  margin-bottom: 2%;
+  width: 100%;
+  outline-style: none;
+  border: none;
+  border-color: var(--basic-gray2);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--basic-gray2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_white_add:hover{
+  padding: 5px;
+  margin-bottom: 2%;
+  outline-style: none;
+  border: none;
+  width: 100%;
+  border-color: var(--text-gray2);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--text-gray2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_white_add:active{
+  padding: 5px;
+  margin-bottom: 2%;
+  border:none;
+  outline-style: none;
+  width: 100%;
+  border-color: var(--text-gray2);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--text-gray2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.button_white_add:focus{
+  padding: 5px;
+  margin-bottom: 2%;
+  border: none;
+  outline-style: none;
+  width: 100%;
+  border-color: var(--text-gray2);
+  border-width: 1px;
+  color: var(--basic-white);
+  background:var(--text-gray2);
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+
+.button_green_circle{
+  background:var(--background-green3);
+  border-radius: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 8px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  }
+
+
+  .button_green_circle:hover{
+    background:var(--background-green4);
+    border-radius: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 8px;
+    color: var(--basic-white);
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    }
+
+    
+.button_green_circle:active{
+  background:var(--background-green4);
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  }
+
+  
+.button_green_circle:focus{
+  background:var(--background-green4);
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  }
+
+
+.button_orange_circle{
+  background:var(--button-edit);
+  border-radius: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 5px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+  }
+
+
+  .button_orange_circle:hover{
+    background:var(--background-orange);
+    border-radius: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 5px;
+    color: var(--basic-white);
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    }
+
+    
+.button_orange_circle:active{
+  background:var(--background-orange);
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  }
+
+  
+.button_orange_circle:focus{
+  background:var(--background-orange);
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: var(--basic-white);
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  }
+
+
+  /*корзина удаления*/
+  .deleteRow {
+    color: var(--button-danger);
+    cursor: pointer;
+  }
+
+/*футер*/
+
+footer {
+  background-color: var(--basic-gray2);
+  color: var(--text-gray1);
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+
+/*логинка регистрация*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.form {
+  z-index: 1;
+  background: #FFFFFF;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  min-height: 100%!important;
+}
+
+
+.f{
+  margin: 10% 8% 5% 8%;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+.body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  background-image: url("image/login_back.jpg");
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;   
+  background-size: auto;   
+}
+
+/*меню в редактировании профиля*/
+.navbar{ 
+  background:var(--background-green3);
+  width: 100%;
+}
+.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+.nav-link{ margin-right: 1em !important;}
+.nav-link:hover{ background: none; color: var(--basic-white); }
+.navbar-collapse{ justify-content: flex-end;}
+.navbar-toggler{  
+  background: var(--basic-white) !important;
+  outline: none;
+  border: none;
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+ }
+
+/*меню руководитель*/
+.menubut {
+  background-color: var(--basic-white); 
+  outline: none;
+  border: none;
+  color: var(--text-gray1)!important;
+  padding: 1% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  margin-right: 1%;
+  font-size: 12pt;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.menubut:hover {
+  background-color: var(--background-green1); 
+  color: var(--text-gray1)!important;
+  outline: none;
+  border: none;
+  padding: 1% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+
+  margin-right: 1%;
+  font-size: 12pt;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.menubut:active {
+  background-color: var(--background-green5); /* Green */
+  color: var(--basic-white)!important;
+  padding: 1% 2%;
+  text-align: center;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  margin-right: 1%;
+
+  font-size: 12pt;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+
+
+/*успеваемость*/
+
+.container{
+min-height: 100% !important;
+}
+
+.list{
+background: #FFFFFF;
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+padding: 2%;
+margin: 1%;
+color: var(--background-orange);
+}
+
+.list-group{
+  background: var(--basic-white);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 1%;
+  margin: 1%;
+}
+
+.form-template{
+  font-family: 'Open Sans';
+  font-size: 14pt;
+  font-weight: 500;
+  color: var(--text-gray1);
+}
+
+
+/*ширина*/
+.width-100{
+  width: 100%!important;
+}
+
+.width-80{
+  width: 80%!important;
+}
+
+.width-98{
+  width: 98%!important;
+}
+
+.width-50{
+  width: 50%!important;
+}
+
+.width-20{
+  width: 20%!important;
+}
+
+.width-24{
+  width: 24%!important;
+}
+
+/*таблица*/
+
+table{
+  overflow-y: hidden!important;
+}
+
+
+/*радиобатон*/
+.form_radio_btn {
+	display: inline-block;
+	margin-right: 10px;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+
+
+
+.check{
+  vertical-align:top;
+  margin:0 3px 0 0;
+  width:10px;
+  height:10px;
+  }
+  .check + label{
+  cursor:pointer;
+  }
+  .check:not(checked){
+  position:absolute;
+  opacity:0;
+  }
+  .check:not(checked) + label{
+  position:relative;
+  padding: 0 0 0 60px;
+  }
+  .check:not(checked) + label:before{
+  content: '';position:
+  absolute;
+  top:0;
+  left:0;
+  width:40px;
+  height:20px;
+  border-radius:10px;
+  background: #CDD1DA;
+  box-shadow:inset 0 2px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow:inset 0 2px 3px rgba(0,0,0,.2);
+  -moz-box-shadow:inset 0 2px 3px rgba(0,0,0,.2);
+  }
+  .check:not(checked) + label:after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:2px;
+  width:20px;
+  height:20px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 2px 5px rgba(0,0,0,.3);
+  -webkit-box-shadow:0 2px 5px rgba(0,0,0,.3);
+  -moz-box-shadow:0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s;
+  }
+  .check:checked + label:before{
+  background:var(--background-green3);
+  }
+  .check:checked + label:after {
+  left:20px;
+  }
+
+
+
+    /* для элемента input c type="radio" */
+    .custom-radio {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    /* для элемента label связанного с .custom-radio */
+    .custom-radio+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+    /* создание в label псевдоэлемента  before со следующими стилями */
+    .custom-radio+label::before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 50%;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    /* стили при наведении курсора на радио */
+    .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+      border-color: #b3d7ff;
+    }
+    /* стили для активной радиокнопки (при нажатии на неё) */
+    .custom-radio:not(:disabled):active+label::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+    /* стили для радиокнопки, находящейся в фокусе */
+    .custom-radio:focus+label::before {
+      box-shadow: 0 0 0 0.2rem var(--background-green4);
+    }
+    /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+    .custom-radio:focus:not(:checked)+label::before {
+      border-color: #80bdff;
+    }
+    /* стили для радиокнопки, находящейся в состоянии checked */
+    .custom-radio:checked+label::before {
+      border-color: var(--button-ok);
+      background-color: var(--button-ok);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+    /* стили для радиокнопки, находящейся в состоянии disabled */
+    .custom-radio:disabled+label::before {
+      background-color: #e9ecef;
+    }
+
+
+    a.nav-link{
+      color: var(--text-gray1)!important;
+      }
+
+/*чек-бокс галочки*/
+.checkbox-other {
+	display: block;
+	margin: 0 0 10px 0;
+	line-height: 22px;  
+}
+.checkbox-other input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin: 0 5px 0 0;
+	padding: 0;
+	vertical-align: top;
+	outline: none;
+	transition: background 0.3s ease;
+	background: url(https://snipp.ru/uploads/contents/checkbox-1.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+ 
+/* Checked */
+.checkbox-other input[type=checkbox]:checked {
+	background-image: url(https://snipp.ru/uploads/contents/checkbox-2.png);
+}
+ 
+/* Focus */
+.focused input[type=checkbox] {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover */
+.checkbox-other input[type=checkbox]:hover {
+	filter: brightness(110%);
+}
+ 
+/* Active */
+.checkbox-other input[type=checkbox]:active {
+	filter: brightness(80%);
+}
+ 
+/* Disabled */
+.checkbox-other input[type=checkbox]:disabled {
+	color: #666;
+	cursor: default;
+}
+.checkbox-other input[type=checkbox]:disabled {
+	filter: grayscale(100%);
+	opacity: 0.6;
+}
+
+
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  content: "✖";
+}
+
+
+
+
+
+
+
+
+.form_radio_group {
+	display: inline-block;
+	overflow: hidden;
+}
+.form_radio_group-item {
+	display: inline-block;
+	float: left;    
+}
+.form_radio_group input[type=radio] {
+	display: none;
+}
+.form_radio_group label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid var(--basic-gray2);
+	border-right: none;
+	user-select: none;
+}
+ 
+.form_radio_group .form_radio_group-item:first-child label {
+	border-radius: 6px 0 0 6px;
+}
+.form_radio_group .form_radio_group-item:last-child label {
+	border-radius: 0 6px 6px 0;
+	border-right: 1px solid var(--basic-gray2);
+}
+ 
+/* Checked */
+.form_radio_group input[type=radio]:checked + label {
+	background: var(--background-green3);
+}
+ 
+/* Hover */
+.form_radio_group label:hover {
+	color: var(--text-gray1);
+}
+ 
+/* Disabled */
+.form_radio_group input[type=radio]:disabled + label {
+	background: #efefef;
+	color: var(--text-gray1);
+}
+
+
+
+.table-hideable td,
+.table-hideable th {
+  width: auto;
+  transition: width .5s, margin .5s;
+}
+
+.btn-condensed.btn-condensed {
+  padding: 0 5px;
+  box-shadow: none;
+}
+
+
+/* use class to have a little animation */
+.hide-col {
+  width: 0px !important;
+  height: 0px !important;
+  display: block !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+
+
+
+
+
+
